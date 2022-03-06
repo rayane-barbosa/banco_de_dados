@@ -43,10 +43,11 @@ CREATE TABLE CARGO
 (
 	CodCargo int identity primary key, /* Referenciando CodCargo como chave primaria da tabela */
 	Salario money not null,
-	FUNCIONARIO int not null REFERENCES FUNCIONARIO(CodFuncionario)  /* Referenciando CodFuncionario como chave estrangeira da tabela CARGO(relacao)*/
+	nome varchar(50)
+	
 )
 /* Criando da tabela FUNCIONARIOCARGO */ 
-CREATE TABLE FUNCIOARIOCARGO(
+CREATE TABLE FUNCIONARIOCARGO(
 		DataInicio date not null,
 		DataFim date not null,
 		CodFuncionario int not null REFERENCES FUNCIONARIO(CodFuncionario), /* Referenciando CodFuncionario como chave estrangeira da tabela FUNCIONARIOCARGO(relacao)*/
@@ -54,7 +55,7 @@ CREATE TABLE FUNCIOARIOCARGO(
 )
 Go
 
-ALTER TABLE FUNCIOARIOCARGO /* Alterando tabela FUNCIONARIOCARGO*/
+ALTER TABLE FUNCIONARIOCARGO /* Alterando tabela FUNCIONARIOCARGO*/
 ADD CONSTRAINT CodFuncionarioCargo PRIMARY KEY CLUSTERED (CodFuncionario, CodCargo) /* Chave primaria composta das chaves estrangeiras CodFuncionario, CodCargo*/
 
 go
