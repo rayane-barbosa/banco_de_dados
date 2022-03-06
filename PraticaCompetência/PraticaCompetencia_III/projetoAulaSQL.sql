@@ -51,8 +51,8 @@ CREATE TABLE FUNCIONARIOCARGO(
 		DataInicio date not null,
 		DataFim date not null,
 		CodFuncionario int not null REFERENCES FUNCIONARIO(CodFuncionario), /* Referenciando CodFuncionario como chave estrangeira da tabela FUNCIONARIOCARGO(relacao)*/
-		CodCargo int not null REFERENCES CARGO(CodCargo)   /* Referenciando CodCargo como chave estrangeira da tabela FUNCIONARIOCARGO(relacao)*/
-)
+		CodCargo int not null REFERENCES CARGO(CodCargo),   /* Referenciando CodCargo como chave estrangeira da tabela FUNCIONARIOCARGO(relacao)*/
+		CodFuncionarioCargo int not null)
 Go
 
 ALTER TABLE FUNCIONARIOCARGO /* Alterando tabela FUNCIONARIOCARGO*/
