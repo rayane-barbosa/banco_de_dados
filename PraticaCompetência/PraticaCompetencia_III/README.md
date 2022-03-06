@@ -101,4 +101,4 @@ ADD CONSTRAINT CodFuncionarioCargo PRIMARY KEY CLUSTERED (CodFuncionario, CodCar
 
 Visualizando as relações utilizando ***POWER BI***:
 
-![Visualizando os dados](C:\Users\Ray\OneDrive - Grupo Educacional Bom Jesus Universidade São Francisco\Imagens\relacoestabelas.PNG)
+![Visualizando os dados](https://github.com/rayane-barbosa/banco_de_dados/blob/main/PraticaCompet%C3%AAncia/PraticaCompetencia_III/image/relacoestabelas.PNG)
