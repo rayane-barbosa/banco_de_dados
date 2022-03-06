@@ -74,7 +74,7 @@ CREATE TABLE CARGO
 )
 ````
 
-Tabela FunionarioCargo:
+Tabela FuncionarioCargo:
 
 ````sql
 CREATE TABLE FUNCIONARIOCARGO(
