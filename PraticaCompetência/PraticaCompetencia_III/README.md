@@ -53,7 +53,7 @@ Tabela Dependente:
 ````sql
 CREATE TABLE DEPENDENTE
 (
-	CodDependente int primary key, /* Referenciando CodDependente como chave primaria da tabela */
+	CodDependente identity int primary key, /* Referenciando CodDependente como chave primaria da tabela */
 	Nome varchar(120) not null,
 	DataNascimento date not null,
 	Sexo char(1) check(Sexo = 'M' or Sexo = 'F' or Sexo = 'O') not null,

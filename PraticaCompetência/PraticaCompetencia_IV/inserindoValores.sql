@@ -82,16 +82,21 @@ values('Elson Carrilho Aranha', 'M', '1992-01-24', 1),
 
 
 INSERT INTO CARGO(nome, Salario)
-values('TechLead Pl', '8.500'),
-	  ('Dev BackEnd Pl', '7.000'),
-	  ('Dev BackEnd Jr', '4.500'),
-	  ('Dev FrontEnd Pl', '6.500'),
-	  ('Dev FrontEnd Jr', '3.000'),
-	  ('Dev FullStack Pl', '8.000'),
-	  ('Dev FullStack Jr', '5.000'),
-	  ('UI/UX Pl', '6.700'),
-	  ('UI/UX Jr', '3.100'),
-	  ('Analista de Dados Pl', '9.000'),
-	  ('Analista de Ddos Jr', '3.250')
+values('TechLead Pl', '8500.00'),
+	  ('Dev BackEnd Pl', '7000.00'),
+	  ('Dev BackEnd Jr', '4500.00'),
+	  ('Dev FrontEnd Pl', '6500.00'),
+	  ('Dev FrontEnd Jr', '3000.00'),
+	  ('Dev FullStack Pl', '8000.00'),
+	  ('Dev FullStack Jr', '5000.00'),
+	  ('UI/UX Pl', '6700.00'),
+	  ('UI/UX Jr', '3100.00'),
+	  ('Analista de Dados Pl', '9000.00'),
+	  ('Analista de Ddos Jr', '3250.00')
 
-INSERT INTO DEPENDENTE(Nome, Sexo, Tipo)
+INSERT INTO DEPENDENTE(FUNCIONARIO,Tipo, Nome, Sexo, DataNascimento)
+values ('2', 'Filho', 'Kelvin Morao Correia', 'M', '2020-07-19'),
+	   ('2', 'Filho', 'Ana Clara Nunes Lameirinhas Correia
+', 'F', '2017-10-15'),
+		('3', '	Filho', 'Matias Chagas', 'M', '2010-11-15'),
+		('5','Conjuge', 'Andrea Sa','F', '1990-09-27')
