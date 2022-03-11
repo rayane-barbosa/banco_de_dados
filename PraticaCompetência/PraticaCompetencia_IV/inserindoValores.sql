@@ -28,7 +28,7 @@ values('Acre', 'AC'),
 
 
 INSERT INTO CIDADE(Nome,ESTADO)
-values ('Rio Branco',1)
+values ('Rio Branco',1),
 	   ('Cruzeiro do Sul', 1),
 	   ('Maceio', 2),
 	   ('Estrela de Alagoas', 2),
@@ -72,3 +72,24 @@ values ('Rio Branco',1)
 	   ('Campinas', 22),
 	   ('Palmas', 23),
 	   ('Araguaina', 23)	 
+
+INSERT INTO FUNCIONARIO(Nome,Sexo,dataNascimento, CIDADE)
+values('Elson Carrilho Aranha', 'M', '1992-01-24', 1),
+		('Abraao Morao Correia', 'M', '1994-05-10', 19),
+		('Jacinto SodreChagas', 'M', '1985-03-26', 22),
+		('Kendrick Bulhosa Cruz', 'M', '1999-03-10', 15),
+		('Michele Veríssimo Condorcet', 'F', '1996-10-05', 21)
+
+
+INSERT INTO CARGO(nome, Salario)
+values('TechLead Pl', '8.500'),
+	  ('Dev BackEnd Pl', '7.000'),
+	  ('Dev BackEnd Jr', '4.500'),
+	  ('Dev FrontEnd Pl', '6.500'),
+	  ('Dev FrontEnd Jr', '3.000'),
+	  ('Dev FullStack Pl', '8.000'),
+	  ('Dev FullStack Jr', '5.000'),
+	  ('UI/UX Pl', '6.700'),
+	  ('UI/UX Jr', '3.100'),
+	  ('Analista de Dados Pl', '9.000'),
+	  ('Analista de Ddos Jr', '3.250')

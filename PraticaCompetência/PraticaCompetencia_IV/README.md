@@ -43,7 +43,7 @@ Inserindo dados na tabela CIDADE:
 
 ```sql
 INSERT INTO CIDADE(Nome,ESTADO)
-values ('Rio Branco',1)
+values ('Rio Branco',1),
 	   ('Cruzeiro do Sul', 1),
 	   ('Maceio', 2),
 	   ('Estrela de Alagoas', 2),
@@ -86,11 +86,20 @@ values ('Rio Branco',1)
 	   ('Sao Paulo', 21),
 	   ('Campinas', 22),
 	   ('Palmas', 23),
-	   ('Araguaina', 23)
-	   
-	 
+	   ('Araguaina', 23)	 
 
 ```
+
+Inserindo dados na tabela FUNCIONARIO:
+
+````sql
+INSERT INTO FUNCIONARIO(Nome,Sexo,dataNascimento, CIDADE)
+values('Elson Carrilho Aranha', 'M', '1992-01-24', 1),
+		('Abraao Morao Correia', 'M', '1994-05-10', 19),
+		('Jacinto SodreChagas', 'M', '1985-03-26', 22),
+		('Kendrick Bulhosa Cruz', 'M', '1999-03-10', 15),
+		('Michele Veríssimo Condorcet', 'F', '1996-10-05', 21)
+````
 
 
 
