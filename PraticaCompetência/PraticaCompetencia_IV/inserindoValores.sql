@@ -93,3 +93,5 @@ values('TechLead Pl', '8.500'),
 	  ('UI/UX Jr', '3.100'),
 	  ('Analista de Dados Pl', '9.000'),
 	  ('Analista de Ddos Jr', '3.250')
+
+INSERT INTO DEPENDENTE(Nome, Sexo, Tipo)

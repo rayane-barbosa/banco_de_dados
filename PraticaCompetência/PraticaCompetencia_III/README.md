@@ -57,7 +57,7 @@ CREATE TABLE DEPENDENTE
 	Nome varchar(120) not null,
 	DataNascimento date not null,
 	Sexo char(1) check(Sexo = 'M' or Sexo = 'F' or Sexo = 'O') not null,
-	Tipo varchar(2),
+	Tipo varchar(20),
 	FUNCIONARIO int not null REFERENCES FUNCIONARIO(CodFuncionario) /* Referenciando CodFuncionario como chave estrangeira da tabela DEPENDENTE(relacao)*/
 )
 ````
