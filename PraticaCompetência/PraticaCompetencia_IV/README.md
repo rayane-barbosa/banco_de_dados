@@ -103,3 +103,20 @@ values('Elson Carrilho Aranha', 'M', '1992-01-24', 1),
 
 
 
+Inserindo dados na tabela CARGO:
+
+````sql
+INSERT INTO CARGO(nome, Salario)
+values('TechLead Pl', '8.500'),
+	  ('Dev BackEnd Pl', '7.000'),
+	  ('Dev BackEnd Jr', '4.500'),
+	  ('Dev FrontEnd Pl', '6.500'),
+	  ('Dev FrontEnd Jr', '3.000'),
+	  ('Dev FullStack Pl', '8.000'),
+	  ('Dev FullStack Jr', '5.000'),
+	  ('UI/UX Pl', '6.700'),
+	  ('UI/UX Jr', '3.100'),
+	  ('Analista de Dados Pl', '9.000'),
+	  ('Analista de Ddos Jr', '3.250')
+````
+
