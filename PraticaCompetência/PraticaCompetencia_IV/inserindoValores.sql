@@ -1,16 +1,4 @@
-# Utilizando T-SQL DML
-
-Utilizando o modelo de banco de dados **AULASQL**:
-
-````sql
 USE AULASQL
-````
-
-
-
-Inserindo dados na tabela **ESTADO** com ***INSERT***
-
-```````sql
 
 INSERT INTO ESTADO(Nome, Sigla)
 values('Acre', 'AC'),
@@ -37,11 +25,8 @@ values('Acre', 'AC'),
 	  ('Sergipe', 'SE'),
 	  ('Tocantins', 'TO'),
 	  ('Distrito Federal', 'DF')
-```````
 
-Inserindo dados na tabela CIDADE:
 
-```sql
 INSERT INTO CIDADE(Nome,ESTADO)
 values ('Rio Branco',1)
 	   ('Cruzeiro do Sul', 1),
@@ -86,11 +71,4 @@ values ('Rio Branco',1)
 	   ('Sao Paulo', 21),
 	   ('Campinas', 22),
 	   ('Palmas', 23),
-	   ('Araguaina', 23)
-	   
-	 
-
-```
-
-
-
+	   ('Araguaina', 23)	 
