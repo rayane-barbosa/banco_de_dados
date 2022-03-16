@@ -108,7 +108,8 @@ INSERT INTO FuncionarioCargo(CodFuncionario, CodCargo, DataInicio, DataFim)
 values('1', '5', '2012-03-01','2018-06-10'),
 	   ('2','2', '2017-09-20', '2021-03-09'),	   
 	    ('3','5', '2015-10-09', '2020-06-10' ),		
-		('5','6', '2019-03-20', '2021-10-07' ),
+		('5','6', '2019-03-20', '2021-10-07' )
+		
 		
 
 INSERT INTO FuncionarioCargo (CodFuncionario, CodCargo, DataInicio)
