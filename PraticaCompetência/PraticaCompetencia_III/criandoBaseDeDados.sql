@@ -2,6 +2,9 @@
 CREATE DATABASE AULASQL
 GO
 
+USE AULASQL
+GO
+
 /* Criando da tabela ESTADO */ 
 CREATE TABLE ESTADO
 (
@@ -19,6 +22,7 @@ CREATE TABLE CIDADE
 )
 
 /* Criando da tabela FUNCIONARIO */ 
+
 CREATE TABLE FUNCIONARIO
 (
 	CodFuncionario int identity primary key, /* Referenciando CodFuncionario como chave primaria da tabela */ 
@@ -49,7 +53,7 @@ CREATE TABLE CARGO
 /* Criando da tabela FUNCIONARIOCARGO */ 
 CREATE TABLE FUNCIONARIOCARGO(
 		DataInicio date not null,
-		DataFim date not null,
+		DataFim date,
 		CodFuncionario int not null REFERENCES FUNCIONARIO(CodFuncionario), /* Referenciando CodFuncionario como chave estrangeira da tabela FUNCIONARIOCARGO(relacao)*/
 		CodCargo int not null REFERENCES CARGO(CodCargo),   /* Referenciando CodCargo como chave estrangeira da tabela FUNCIONARIOCARGO(relacao)*/
 		CodFuncionarioCargo int not null

@@ -2,7 +2,7 @@ Criando a nossa base de dados AULASQL:
 
 ``````sql
 
-CREATE DATABASE AULASQL
+CREATE DATABASE aulasql
 GO
 ``````
 
@@ -15,7 +15,7 @@ A base de dados que será criada a partir do modelo lógico apresentado conta co
 Tabela Estado:
 
 ``````sql
-CREATE TABLE ESTADO
+CREATE TABLE Estado
 (
 
 	CodEstado int identity primary key, /* Referenciando CodEstado como chave primaria da tabela */ 
@@ -27,7 +27,7 @@ CREATE TABLE ESTADO
 Tabela Cidade:
 
 ````sql
-CREATE TABLE CIDADE
+CREATE TABLE Cidade
 ( 
 	Nome varchar(50) not null ,
 	Codcidade int identity primary key,/* Referenciando CodCidade como chave primaria da tabela */ 
@@ -38,34 +38,34 @@ CREATE TABLE CIDADE
 Tabela Funcionario:
 
 ````sql
-CREATE TABLE FUNCIONARIO
+CREATE TABLE Funcionario
 (
 	CodFuncionario int identity primary key, /* Referenciando CodFuncionario como chave primaria da tabela */ 
 	Nome varchar(120) not null,
 	DataNascimento date not null,
 	Sexo char(1) check(Sexo = 'M' or Sexo = 'F' or Sexo = 'O') not null, 
-	CIDADE int not null REFERENCES CIDADE(CodCidade) /* Referenciando CodCidade como chave estrangeira da tabela FUNCIONARIO(relacao)*/
+	CodCidade int not null REFERENCES Cidade(CodCidade) /* Referenciando CodCidade como chave estrangeira da tabela FUNCIONARIO(relacao)*/
 )
 ````
 
 Tabela Dependente:
 
 ````sql
-CREATE TABLE DEPENDENTE
+CREATE TABLE Dependente
 (
 	CodDependente identity int primary key, /* Referenciando CodDependente como chave primaria da tabela */
 	Nome varchar(120) not null,
 	DataNascimento date not null,
 	Sexo char(1) check(Sexo = 'M' or Sexo = 'F' or Sexo = 'O') not null,
 	Tipo varchar(20),
-	FUNCIONARIO int not null REFERENCES FUNCIONARIO(CodFuncionario) /* Referenciando CodFuncionario como chave estrangeira da tabela DEPENDENTE(relacao)*/
+	CodFuncionario int not null REFERENCES Funcionario(CodFuncionario) /* Referenciando CodFuncionario como chave estrangeira da tabela DEPENDENTE(relacao)*/
 )
 ````
 
 Tabela Cargo:
 
 ````sql
-CREATE TABLE CARGO
+CREATE TABLE Cargo
 (
 	CodCargo int identity primary key, /* Referenciando CodCargo como chave primaria da tabela */
 	Salario money not null,
@@ -79,10 +79,10 @@ Tabela FuncionarioCargo:
 ````sql
 CREATE TABLE FUNCIONARIOCARGO(
 		DataInicio date not null,
-		DataFim date not null,
+		DataFim date,
 		CodFuncionario int not null REFERENCES FUNCIONARIO(CodFuncionario), /* Referenciando CodFuncionario como chave estrangeira da tabela FUNCIONARIOCARGO(relacao)*/
 		CodCargo int not null REFERENCES CARGO(CodCargo),   /* Referenciando CodCargo como chave estrangeira da tabela FUNCIONARIOCARGO(relacao)*/
-		CodFuncionarioCargo int not null
+		CodFuncionarioCargo int 
 		)
 ````
 

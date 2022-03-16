@@ -1,16 +1,50 @@
-# Utilizando T-SQL DML
+/*Exercicios Banco de Dados 1*/
 
-Utilizando o modelo de banco de dados **AULASQL**:
+/*Usando DDL*/
 
-````sql
-USE aulasql
-````
+/*Ex 1: É solicitado a criação de 3 tabelas a partir de um modelo/*
 
+/*Para atender os requisitos dos exercícios propostos é criada uma base de dados que eu vou chamar de paises/*
 
+CREATE DATABASE paises
 
-Inserindo dados na tabela **ESTADO** com ***INSERT***
+/*Defino para o SQL que irei realizar as operações a seguir no banco de dados paises*/
 
-```````sql
+USE paises
+
+/*Tabela Pais*/
+CREATE TABLE Pais
+(
+	IDPais int identity primary key,
+  	NomePais varchar(80),
+	SiglaPais char(2),
+	
+
+)
+
+/*Tabela Estado*/
+CREATE TABLE Estado
+(	
+	IDEstado int identity primary key,
+	NomeEstado varchar(50),
+	SiglaEstado char(2),
+	IDPais int
+)
+/*Tabela Cidade*/ 
+CREATE TABLE Cidade
+(
+	IDCidade int identity primary key,
+	NomeCidade varchar(120),
+	IDEstado int
+		
+)
+
+/*Usando DML*/
+/*Ex 2:  */
+INSERT TO TABLE Pais(NomePais , SiglaPais)
+values('Brasil', 'BR')
+
+/*Ex: 3 */
 
 INSERT INTO Estado(NomeEstado, SiglaEstado)
 values('Acre', 'AC'), /* 1*/
@@ -40,99 +74,65 @@ values('Acre', 'AC'), /* 1*/
 	  ('Sergipe', 'SE'),/*25 */
 	  ('Tocantins', 'TO'),/*26 */
 	  ('Distrito Federal', 'DF')/* 27*/
-```````
 
-Inserindo dados na tabela CIDADE:
 
-```sql
-INSERT INTO Cidade(Nome,CodEstado)
-values ('Rio Branco',1),
-	   ('Cruzeiro do Sul', 1),
-	   ('Maceio', 2),
+/*Ex: 4 */
+
+INSERT TO Cidade(NomeCidade, IDEstado)
+values('Maceio', 2),
 	   ('Estrela de Alagoas', 2),
+	   ('Anadia',2),
 	   ('Macapa', 3),
 	   ('Santana', 3),
+	   ('Itaubal', 3),
 	   ('Manaus', 4),
 	   ('Coari', 4),
+	   (4),
 	   ('Salvador', 5),
 	   ('Ilheus', 5),
+	   (5),
 	   ('Fortaleza', 6),
 	   ('Sobral', 6),
+	   (6),
 	   ('Vitoria', 7),
 	   ('Guarapari', 7),
+	   (7),
 	   ('Goias', 8),
 	   ('Goiania', 8),
+	   (8),
 	   ('Sao Luis', 9),
 	   ('Acailandia', 9),
+	   (9),
 	   ('Cuiaba', 10),
 	   ('Sinop', 10),
+	   (10),
 	   ('Campo Grande', 11),
 	   ('Dourados', 11),
+	   (11),
 	   ('Belo Horizonte', 12),
 	   ('Sao Tome das Letras', 12),
+	   (12),
 	   ('Belem', 13),
 	   ('Ananindeua', 13),
+	   (13),
 	   ('Teresina', 14),
 	   ('Parnaiba', 14),
+	   (14),
 	   ('Rio de Janeiro', 15),
 	   ('Niteroi', 15),
+	   (15),
 	   ('Natal', 16),
 	   ('Mossoro', 16),
+	   (16),
 	   ('Porto Alegre', 17),
 	   ('Rio Grande', 17),
+	   (17),
 	   ('Porto velho', 18),
 	   ('Vilhena', 18),
+	   (18),
 	   ('Boa Vista', 19),
 	   ('Alto Alegre', 19),
+	   (19),
 	   ('Florianopolis', 20),
 	   ('Blumenal', 20),
-	   ('Sao Paulo', 21),
-	   ('Campinas', 21),
-	   ('Palmas', 23),
-	   ('Araguaina', 23)	 
-
-```
-
-Inserindo dados na tabela FUNCIONARIO:
-
-````sql
-INSERT INTO Funcionario(Nome,Sexo,dataNascimento, CodCidade)
-values('Elson Carrilho Aranha', 'M', '1992-01-24', 1),
-		('Abraao Morao Correia', 'M', '1994-05-10', 19),
-		('Jacinto SodreChagas', 'M', '1985-03-26', 22),
-		('Kendrick Bulhosa Cruz', 'M', '1999-03-10', 15),
-		('Michele Veríssimo Condorcet', 'F', '1996-10-05', 21)
-````
-
-
-
-Inserindo dados na tabela CARGO:
-
-````sql
-INSERT INTO Cargo(nome, Salario)
-values('TechLead Pl', '8.500'),
-	  ('Dev BackEnd Pl', '7.000'),
-	  ('Dev BackEnd Jr', '4.500'),
-	  ('Dev FrontEnd Pl', '6.500'),
-	  ('Dev FrontEnd Jr', '3.000'),
-	  ('Dev FullStack Pl', '8.000'),
-	  ('Dev FullStack Jr', '5.000'),
-	  ('UI/UX Pl', '6.700'),
-	  ('UI/UX Jr', '3.100'),
-	  ('Analista de Dados Pl', '9.000'),
-	  ('Analista de Ddos Jr', '3.250')
-````
-
-
-
-Inserindo dados na tabela DEPENDENTE:
-
-````sql
-INSERT INTO Dependente(CodFuncionario,Tipo, Nome, Sexo, DataNascimento)
-values ('2', 'Filho', 'Kelvin Morao Correia', 'M', '2020-07-19'),
-	   ('2', 'Filho', 'Ana Clara Nunes Lameirinhas Correia
-', 'F', '2017-10-15'),
-		('3', '	Filho', 'Matias Chagas', 'M', '2010-11-15'),
-		('5','Conjuge', 'Andrea Sa','F', '1990-09-27')
-````
-
+	   (20),

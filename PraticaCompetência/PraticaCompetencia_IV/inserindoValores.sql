@@ -69,7 +69,9 @@ values ('Rio Branco',1),
 	   ('Florianopolis', 20),
 	   ('Blumenal', 20),
 	   ('Sao Paulo', 21),
-	   ('Campinas', 22),
+	   ('Campinas', 21),
+	   (22),
+	   (22),
 	   ('Palmas', 23),
 	   ('Araguaina', 23)	 
 
@@ -100,3 +102,7 @@ values ('2', 'Filho', 'Kelvin Morao Correia', 'M', '2020-07-19'),
 ', 'F', '2017-10-15'),
 		('3', '	Filho', 'Matias Chagas', 'M', '2010-11-15'),
 		('5','Conjuge', 'Andrea Sa','F', '1990-09-27')
+
+
+INSERT INTO FUNCIONARIOCARGO(CodFuncionario, CodCargo, DataInicio, DataFim)
+values('1', '5', '2012-03-01','2018-06-10')
