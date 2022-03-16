@@ -28,7 +28,7 @@ values('Acre', 'AC'), /* 1*/
 	  ('Para', 'PA'),/*13 */
 	  ('Paraiba','PB'),/* 14*/
 	  ('Parana', 'PR'),/*15 */
-	  ('Pernambuco', 'PE')/*16 */
+	  ('Pernambuco', 'PE'),/*16 */
 	  ('Piaui', 'PI'),/* 17*/
 	  ('Rio de Janeiro', 'RJ'),/*18 */
 	  ('Rio Grande do Norte', 'RN'),/*19 */
@@ -89,7 +89,7 @@ values ('Rio Branco',1),
 	   ('Sao Paulo', 21),
 	   ('Campinas', 21),
 	   ('Aracaju',22),
-	   ('Lagarto', 22)
+	   ('Lagarto', 22),
 	   ('Palmas', 23),
 	   ('Araguaina', 23)	 
 
