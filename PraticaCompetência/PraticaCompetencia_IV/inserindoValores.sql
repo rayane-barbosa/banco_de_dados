@@ -1,6 +1,6 @@
-USE AULASQL
+USE aulasql
 
-INSERT INTO ESTADO(Nome, Sigla)
+INSERT INTO Estado(Nome, Sigla)
 values('Acre', 'AC'),
 	  ('Alagoas', 'AL'),
 	  ('Amapa', 'AM'),
@@ -27,7 +27,7 @@ values('Acre', 'AC'),
 	  ('Distrito Federal', 'DF')
 
 
-INSERT INTO CIDADE(Nome,ESTADO)
+INSERT INTO Cidade(Nome,CodEstado)
 values ('Rio Branco',1),
 	   ('Cruzeiro do Sul', 1),
 	   ('Maceio', 2),
@@ -70,33 +70,33 @@ values ('Rio Branco',1),
 	   ('Blumenal', 20),
 	   ('Sao Paulo', 21),
 	   ('Campinas', 21),
-	   (22),
-	   (22),
+	   ('Aracaju',22),
+	   ('Lagarto', 22)
 	   ('Palmas', 23),
 	   ('Araguaina', 23)	 
 
-INSERT INTO FUNCIONARIO(Nome,Sexo,dataNascimento, CIDADE)
+INSERT INTO Funcionario(Nome,Sexo,dataNascimento, CodCidade)
 values('Elson Carrilho Aranha', 'M', '1992-01-24', 1),
 		('Abraao Morao Correia', 'M', '1994-05-10', 19),
 		('Jacinto SodreChagas', 'M', '1985-03-26', 22),
 		('Kendrick Bulhosa Cruz', 'M', '1999-03-10', 15),
-		('Michele Veríssimo Condorcet', 'F', '1996-10-05', 21)
+		('Michele Verissimo Condorcet', 'F', '1996-10-05', 21)
 
 
-INSERT INTO CARGO(nome, Salario)
-values('TechLead Pl', '8500.00'),
-	  ('Dev BackEnd Pl', '7000.00'),
-	  ('Dev BackEnd Jr', '4500.00'),
-	  ('Dev FrontEnd Pl', '6500.00'),
-	  ('Dev FrontEnd Jr', '3000.00'),
-	  ('Dev FullStack Pl', '8000.00'),
-	  ('Dev FullStack Jr', '5000.00'),
-	  ('UI/UX Pl', '6700.00'),
-	  ('UI/UX Jr', '3100.00'),
-	  ('Analista de Dados Pl', '9000.00'),
-	  ('Analista de Ddos Jr', '3250.00')
+INSERT INTO Cargo(Nome, Salario
+values('TechLead Pl', '8500'), /*1*/
+	  ('Dev BackEnd Pl', '7000'), /*2*/
+	  ('Dev BackEnd Jr', '4500'),/*3*/
+	  ('Dev FrontEnd Pl', '6500'),/*4*/
+	  ('Dev FrontEnd Jr', '3000'),/*5*/
+	  ('Dev FullStack Pl', '8000'),/*6*/
+	  ('Dev FullStack Jr', '5000'),/*7*/
+	  ('UI/UX Pl', '6700'),/*8*/
+	  ('UI/UX Jr', '3100'),/*9*/
+	  ('Analista de Dados Pl', '9000'), /*10*/
+	  ('Analista de Dados Jr', '3250')/*11*/
 
-INSERT INTO DEPENDENTE(FUNCIONARIO,Tipo, Nome, Sexo, DataNascimento)
+INSERT INTO Dependente(CodFuncionario,Tipo, Nome, Sexo, DataNascimento)
 values ('2', 'Filho', 'Kelvin Morao Correia', 'M', '2020-07-19'),
 	   ('2', 'Filho', 'Ana Clara Nunes Lameirinhas Correia
 ', 'F', '2017-10-15'),
@@ -104,5 +104,13 @@ values ('2', 'Filho', 'Kelvin Morao Correia', 'M', '2020-07-19'),
 		('5','Conjuge', 'Andrea Sa','F', '1990-09-27')
 
 
-INSERT INTO FUNCIONARIOCARGO(CodFuncionario, CodCargo, DataInicio, DataFim)
-values('1', '5', '2012-03-01','2018-06-10')
+INSERT INTO FuncionarioCargo(CodFuncionario, CodCargo, DataInicio, DataFim)
+values('1', '5', '2012-03-01','2018-06-10'),
+	  ('1', '8', '2018-06-13'),
+	  ('2','2', '2017-09-20', '2021-03-09'),
+	   ('2','1', '2021-03-10' ),
+	    ('3','5', '2015-10-09', '2020-06-10' ),
+		('3','7','2020-06-15'),
+		('4','3', '2022-01-10'),
+		('5','6', '2019-03-20', '2021-10-07' ),
+		('5','10', '2021-10-10' )

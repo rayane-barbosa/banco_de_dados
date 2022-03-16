@@ -1,7 +1,6 @@
 Criando a nossa base de dados AULASQL:
 
 ``````sql
-
 CREATE DATABASE aulasql
 GO
 ``````
@@ -59,7 +58,7 @@ Tabela Dependente:
 ````sql
 CREATE TABLE Dependente
 (
-	CodDependente identity int primary key, /* Referenciando CodDependente como chave primaria da tabela */
+	CodDependente int identity primary key, /* Referenciando CodDependente como chave primaria da tabela */
 	Nome varchar(120) not null,
 	DataNascimento date not null,
 	Sexo char(1) check(Sexo = 'M' or Sexo = 'F' or Sexo = 'O') not null,
@@ -75,7 +74,7 @@ CREATE TABLE Cargo
 (
 	CodCargo int identity primary key, /* Referenciando CodCargo como chave primaria da tabela */
 	Salario money not null,
-	nome varchar(50)
+	Nome varchar(50)
 	
 )
 ````

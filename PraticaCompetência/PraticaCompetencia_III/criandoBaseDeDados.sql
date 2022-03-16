@@ -59,7 +59,7 @@ CREATE TABLE FUNCIONARIOCARGO(
 		)
 
 
-ALTER TABLE FUNCIONARIOCARGO /* Alterando tabela FUNCIONARIOCARGO*/
+ALTER TABLE FuncionarioCargo /* Alterando tabela FUNCIONARIOCARGO*/
 ADD CONSTRAINT CodFuncionarioCargo PRIMARY KEY CLUSTERED (CodFuncionario, CodCargo) /* Chave primaria composta das chaves estrangeiras CodFuncionario, CodCargo*/
 
 

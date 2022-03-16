@@ -12,7 +12,7 @@ Inserindo dados na tabela **ESTADO** com ***INSERT***
 
 ```````sql
 
-INSERT INTO Estado(NomeEstado, SiglaEstado)
+INSERT INTO Estado(Nome, Sigla)
 values('Acre', 'AC'), /* 1*/
 	  ('Alagoas', 'AL'), /*2 */
 	  ('Amapa', 'AM'),/* 3*/
@@ -88,12 +88,14 @@ values ('Rio Branco',1),
 	   ('Blumenal', 20),
 	   ('Sao Paulo', 21),
 	   ('Campinas', 21),
+	   ('Aracaju',22),
+	   ('Lagarto', 22)
 	   ('Palmas', 23),
 	   ('Araguaina', 23)	 
 
 ```
 
-Inserindo dados na tabela FUNCIONARIO:
+Inserindo dados na tabela Funcionario:
 
 ````sql
 INSERT INTO Funcionario(Nome,Sexo,dataNascimento, CodCidade)
@@ -106,26 +108,26 @@ values('Elson Carrilho Aranha', 'M', '1992-01-24', 1),
 
 
 
-Inserindo dados na tabela CARGO:
+Inserindo dados na tabela Cargo:
 
 ````sql
-INSERT INTO Cargo(nome, Salario)
-values('TechLead Pl', '8.500'),
-	  ('Dev BackEnd Pl', '7.000'),
-	  ('Dev BackEnd Jr', '4.500'),
-	  ('Dev FrontEnd Pl', '6.500'),
-	  ('Dev FrontEnd Jr', '3.000'),
-	  ('Dev FullStack Pl', '8.000'),
-	  ('Dev FullStack Jr', '5.000'),
-	  ('UI/UX Pl', '6.700'),
-	  ('UI/UX Jr', '3.100'),
-	  ('Analista de Dados Pl', '9.000'),
-	  ('Analista de Ddos Jr', '3.250')
+INSERT INTO Cargo(Nome, Salario)
+values('TechLead Pl', '8500'),
+	  ('Dev BackEnd Pl', '7000'),
+	  ('Dev BackEnd Jr', '4500'),
+	  ('Dev FrontEnd Pl', '6500'),
+	  ('Dev FrontEnd Jr', '3000'),
+	  ('Dev FullStack Pl', '8000'),
+	  ('Dev FullStack Jr', '5000'),
+	  ('UI/UX Pl', '6700'),
+	  ('UI/UX Jr', '3100'),
+	  ('Analista de Dados Pl', '9000'),
+	  ('Analista de Ddos Jr', '3250')
 ````
 
 
 
-Inserindo dados na tabela DEPENDENTE:
+Inserindo dados na tabela Dependente:
 
 ````sql
 INSERT INTO Dependente(CodFuncionario,Tipo, Nome, Sexo, DataNascimento)
@@ -134,5 +136,20 @@ values ('2', 'Filho', 'Kelvin Morao Correia', 'M', '2020-07-19'),
 ', 'F', '2017-10-15'),
 		('3', '	Filho', 'Matias Chagas', 'M', '2010-11-15'),
 		('5','Conjuge', 'Andrea Sa','F', '1990-09-27')
+````
+
+Inserindo dados na tabela FuncionarioCargo:
+
+````sql
+INSERT INTO FuncionarioCargo(CodFuncionario, CodCargo, DataInicio, DataFim)
+values('1', '5', '2012-03-01','2018-06-10'),
+	  ('1', '8', '2018-06-13'),
+	  ('2','2', '2017-09-20', '2021-03-09'),
+	   ('2','1', '2021-03-10' ),
+	    ('3','5', '2015-10-09', '2020-06-10' ),
+		('3','7','2020-06-15'),
+		('4','3', '2022-01-10'),
+		('5','6', '2019-03-20', '2021-10-07' ),
+		('5','10', '2021-10-10' )
 ````
 
