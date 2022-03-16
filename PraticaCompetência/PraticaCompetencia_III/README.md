@@ -8,6 +8,12 @@ GO
 
 Após a execução do comando acima é necessário selecionar a base de dados para criação das tabelas.
 
+````sql
+USE aulasql
+````
+
+
+
 A base de dados que será criada a partir do modelo lógico apresentado conta com as tabelas: Estado, Cidade, Funcionário, Dependente e Cargo, que são tabelas fortes* e a tabela FuncionarioCargo que é uma tabela fraca. As mesmas possuem atributos identificadores e as relações entre tabelas é realizada através de ***REFERENCES***.
 
 **Criação das tabelas:**
@@ -31,7 +37,7 @@ CREATE TABLE Cidade
 ( 
 	Nome varchar(50) not null ,
 	Codcidade int identity primary key,/* Referenciando CodCidade como chave primaria da tabela */ 
-	ESTADO int not null REFERENCES ESTADO(CodEstado)	/* Referenciando CodEstado como chave estrangeira da tabela CIDADE(relacao)*/ 
+	CodEstado int not null REFERENCES Estado(CodEstado)	/* Referenciando CodEstado como chave estrangeira da tabela CIDADE(relacao)*/ 
 )
 ````
 
@@ -82,7 +88,7 @@ CREATE TABLE FUNCIONARIOCARGO(
 		DataFim date,
 		CodFuncionario int not null REFERENCES FUNCIONARIO(CodFuncionario), /* Referenciando CodFuncionario como chave estrangeira da tabela FUNCIONARIOCARGO(relacao)*/
 		CodCargo int not null REFERENCES CARGO(CodCargo),   /* Referenciando CodCargo como chave estrangeira da tabela FUNCIONARIOCARGO(relacao)*/
-		CodFuncionarioCargo int 
+		
 		)
 ````
 
@@ -93,7 +99,7 @@ Nesse caso precisamos que a ***PRIMARY KEY*** receba os valores e identifique Co
 Para isso precisaremos alterar a tabela como ***ALTER***
 
 ````sql
-ALTER TABLE FUNCIONARIOCARGO /* Alterando tabela FUNCIONARIOCARGO*/
+ALTER TABLE FuncionarioCargo /* Alterando tabela FUNCIONARIOCARGO*/
 ADD CONSTRAINT CodFuncionarioCargo PRIMARY KEY CLUSTERED (CodFuncionario, CodCargo) /* Chave primaria composta das chaves estrangeiras CodFuncionario, CodCargo*/
 ````
 
