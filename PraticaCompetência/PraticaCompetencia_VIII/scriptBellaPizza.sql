@@ -17,12 +17,25 @@ GO
 
 -- Exibe o nome de todas as pizzas independentemente se existem ingredientes. 
 
-SELECT Nome
+SELECT Pizza.Nome,
+		PizzaIngrediente.Qtd
+FROM Pizza LEFT JOIN PizzaIngrediente ON Pizza.IDPizza = PizzaIngrediente.IDPizza
 
-FROM Pizza
+GROUP BY Pizza.Nome, PizzaIngrediente.Qtd
+GO
 
 
 -- Exibe o nome e o valor da pizza, e o nome do ingrediente utilizado. 
+
+SELECT Pizza.Nome, Pizza.Preco, Ingrediente.Nome
+
+FROM Pizza  INNER JOIN Pizza.Ingrediente ON Pizza.IDPizza = PizzaIngrediente.IDPizza INNER JOIN Ingrediente on PizzaIngrediente.IDIngrediente = PizzaIngrediente.IDIngrediente
+
+GROUP BY Pizza.Nome, Pizza.Preco, Ingrediente.Nome
+
+
+GO
+
 
 -- Crie uma consulta que exibe o Nome da Pizza e o Preço de Custo (soma de todos os ingredientes multiplicado pela qtd) de cada Pizza
 
@@ -51,4 +64,15 @@ SELECT
     AVG(Preco) as mediaPrecos
 
 FROM Pizza
+
+GO
+
+CREATE VIEW VW_PIZZAINGREDIENTES
+AS
+SELECT Pizza.Nome,
+		PizzaIngrediente.Qtd
+FROM Pizza LEFT JOIN PizzaIngrediente ON Pizza.IDPizza = PizzaIngrediente.IDPizza
+
+GROUP BY Pizza.Nome, PizzaIngrediente.Qtd
+GO
 
